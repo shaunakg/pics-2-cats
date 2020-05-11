@@ -1,1 +1,47 @@
 
+<!doctype html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="stylesheet.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pics to Cats | Convert all pictures in a website to cat pictures with 1 click.</title>
+
+    <meta charset="utf-8">
+    <meta name="description" content="Convert all pictures in a website to cat pictures with 1 click.">
+    <meta name="keywords" content="Experiment,Joke,Pets,Cats,Cute,Test,JS,Javascript">
+    <meta name="author" content="Shaunak Gadkari">
+    <meta name="creator" content="Shaunak Gadkari">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color" content="#485a78">
+    <meta name="color-scheme" content="only light">
+
+</head>
+
+<body>
+
+<div class="btns-wrapper">
+
+    <p id="head-banner" class="head-banner">   	
+        &#129045; Click and drag the button to your bookmarks bar &#129045;
+    </p>
+
+    <div class="btns-container">
+        <a onmouseover="tban.style.opacity=1" onmouseout="tban.style.opacity=0" onclick="dontClickIt(this)" class="btn blue-btn" title="Pictures to Cats bookmarklet" href="javascript:try{barry=[]}catch (e){let barry=[]};Array.from(document.querySelectorAll('img')).forEach((v,index) => {console.log(v.src || v.href);barry.push([v.src || v.href, v.alt]); v.src='//placekitten.com/' + Math.ceil(v.getBoundingClientRect().width) + '/' + Math.ceil(v.getBoundingClientRect().height);v.alt='Picture of a cat from placekitten.com'});">🖼️ -> 😺</a>
+        <a onmouseover="tban.style.opacity=1" onmouseout="tban.style.opacity=0" onclick="dontClickIt(this)" class="btn orange-btn" title="Cats to Pictures bookmarklet" href="javascript:Array.from(document.querySelectorAll('img')).forEach((v,index) => {console.log(v.src || v.href);v.src=barry[index][0];v.alt=barry[index][1] || v.src;});barry=[]">[&#8635;] 😺 -> 🖼️</a>
+    </div>
+
+</div>
+
+<script>
+
+var tban = document.getElementById("head-banner");
+
+function dontClickIt(e) {
+    alert("Drag this link to your bookmarks bar to have it accessible for any page.");
+}
+
+</script>
+
+</body>
